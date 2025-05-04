@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /*  SELETORES PERSONALIZADOS
+            #  = id
+            .  = class
+            :  = pseudo-classe
+            :: = pseudo-elemento
+        
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: rgb(36, 34, 34);
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial {
+            background-color: darkred;
+            color: white;
+        }
+
+        .especial::before {
+            content: '★ ';
+        }
+
+        .especial::after {
+            content: ' ★';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/caue077?tab=repositories" target="_blank">GitHub</a></li>
+        <li><a href="https://www.instagram.com/_caue77_/" target="_blank" class="especial">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@_caue77_" target="_blank">TikTok</a></li>
+    </ul>
+</body>
+</html>
