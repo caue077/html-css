@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/* Todas as Midias */
+
+/* Typical Device breakpoints 
+-----------------------------
+pequenas telas: ate 600px
+celular: de 600px 768px
+tablet: de 768px ate 992px
+pc: 992px ate 1200px
+grandes telas: acima de 1200px
+*/
+
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-image: url(../img/back-print.jpg); /*DESNECESSARIO */ 
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Caue 2025 todos os direitos reservados';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    #phone { display: none; }
+    #tablet { display: none; }
+    #print { display: block; }
+    #pc { display: none; }
+    #tv { display: none; }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../img/back-tablet.jpg);
+    }
+
+    #phone { display: none; }
+    #tablet { display: block; }
+    #print { display: none; }
+    #pc { display: none; }
+    #tv { display: none; }
+}
+
+/* PC */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../img/back-pc.jpg);
+    }
+
+    #phone { display: none; }
+    #tablet { display: none; }
+    #print { display: none; }
+    #pc { display: block; }
+    #tv { display: none; }
+}
+
+/* TELAS GRANDES */
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../img/back-tv.jpg);
+    }
+
+    #phone { display: none; }
+    #tablet { display: none; }
+    #print { display: none; }
+    #pc { display: none; }
+    #tv { display: block; }
+}
+
